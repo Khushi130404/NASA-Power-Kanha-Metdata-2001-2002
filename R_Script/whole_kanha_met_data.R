@@ -153,7 +153,7 @@ final_df <- ndvi %>%
 # 10. Save Final CSV
 # -----------------------------
 output_csv <- file.path(output_folder,
-                        "Whole_Kanha_NDVI_Meteorology.csv")
+                        "whole_kanha_ndvi_meteorology.csv")
 
 write_csv(final_df, output_csv)
 
