@@ -18,8 +18,8 @@ for (p in packages) {
 # -----------------------------
 # 2. Paths (EDIT HERE)
 # -----------------------------
-input_csv <- "D:/NASA_Power_Kanha_Metdata_2001_2002/Data_Table/data_meteorology/nw_kanha_ndvi_meteorology.csv"
-plot_dir  <- "D:/NASA_Power_Kanha_Metdata_2001_2002/Plots/nw_kanha_plots"
+input_csv <- "D:/NASA_Power_Kanha_Metdata_2001_2002/Data_Table/data_meteorology/gl2_kanha_ndvi_meteorology.csv"
+plot_dir  <- "D:/NASA_Power_Kanha_Metdata_2001_2002/Plots/gl2_kanha_plots"
 
 if (!dir.exists(plot_dir)) {
   dir.create(plot_dir, recursive = TRUE)
@@ -89,7 +89,7 @@ plot_ndvi_vs_met <- function(data, met_col) {
 
     labs(
       title = paste("NDVI vs", met_labels[[met_col]]),
-      subtitle = "North West Kanha",
+      subtitle = "Grassland-2 Kanha",
       x = "Time",
       color = "Variable"
     ) +
@@ -110,7 +110,7 @@ for (met in met_cols) {
 
   out_file <- file.path(
     plot_dir,
-    paste0("nw_kanha_NDVI_vs_", met, ".png")
+    paste0("gl2_kanha_NDVI_vs_", met, ".png")
   )
 
   ggsave(
